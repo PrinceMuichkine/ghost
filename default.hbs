@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang='{{ @site.locale }}' class='{{#if @custom.enable_dark_mode}} is-darkModeAdminSetting-enabled {{/if}}'>
+
+  {{> structure/head }}
+
+  <body class='{{ body_class }}'>
+    {{> skip }}
+
+    {{> structure/header }}
+
+    <main id='main'>
+      {{{ body }}}
+
+      {{^if @member.paid}}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8996991459143775"
+         crossorigin="anonymous"></script>
+      {{/if}}
+    </main>
+
+    {{> structure/footer }}
+
+    <script src='{{ asset 'js/app.min.js' }}'></script>
+    {{ ghost_foot }}
+  </body>
+</html>
