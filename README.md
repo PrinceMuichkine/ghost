@@ -1,1 +1,1 @@
-### The African Ledger original Ghost theme
+### africanledger.com original theme
